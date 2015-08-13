@@ -4,6 +4,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
 		<script src="jsontest.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/base.css">
+		<link rel="stylesheet" type="text/css" href="styles/layout.css">
+		<link rel="stylesheet" type="text/css" href="styles/modules.css">
 
 		<script>
 			var app1 = angular.module('Cdm', ['ngRoute']);
@@ -14,7 +17,7 @@
 				}).error(function(response){
 					console.log("greska");
 				});
-			});		
+			});
 
 			app1.config(["$routeProvider", function($routeProvider){
 				$routeProvider
@@ -52,7 +55,7 @@
 				$http.get('clanak.json')
 				.success(function(response) {
 					$scope.article = response;
-   				    $scope.trusted = $sce.trustAsHtml($scope.article);
+   				    // $scope.trusted = $sce.trustAsHtml($scope.article);
 				}).error(function(response){
 					console.log("greska");
 				});			

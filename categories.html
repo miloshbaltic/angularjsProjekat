@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<style type="text/css">
-		ul{
-			list-style: none;
-		}
-		a{
-			display: inline;
-		}
-	</style>
+<head>	
 </head>
 
 <body>
+	<div id="navigation">
 	<ul ng-repeat="category in categories">
 		<a href = "category/{{category.id}}"><li>{{category.name}}</li></a>
 	</ul>
+	<div>
 </body>
 </html>
